@@ -50,7 +50,8 @@
     <h2>The Hamming (7,4) Code in Action</h2>
     <p>
       The Hamming (7,4) code is a [7,4,3]  linear block code. It can correct a single error in each codeword. Use the
-      text box to input a message in english characters (up to 10 characters). This message will be translated into binary and sent across a binary
+      text box to input a message in English characters (up to 10 characters). This message will be translated into
+      binary and sent across a binary
       symmetric channel (BSC). Use the slider to select an error rate for the BSC.
     </p>
 
@@ -78,7 +79,7 @@
     <div class="grid-section">
       <h3>Transmitted Binary (Encoded)</h3>
       <p class="small-text">The ASCII binary is split into 4-bit strings. The Hamming Code encodes each 4-bit string
-      into a 7-bit codeword</p>
+      into a 7-bit codeword.</p>
       <div id="tx-grid" class="bit-container"></div>
     </div>
 
@@ -138,6 +139,7 @@
     return bin;
   }
 
+  // We use XOR's for speed'
   function encodeBlock(bits4) {
     let d1 = parseInt(bits4[0]), d2 = parseInt(bits4[1]), d3 = parseInt(bits4[2]), d4 = parseInt(bits4[3]);
     let p1 = d1 ^ d2 ^ d4;
